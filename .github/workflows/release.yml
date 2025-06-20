@@ -36,7 +36,7 @@ jobs:
       - run: pnpm build
       - run: pnpm lint
       - run: pnpm check
-      - run: pnpm test
+      - run: xvfb-run -a pnpm test
       - run: |
           git config --global user.name "googleworkspace-bot"
           git config --global user.email "googleworkspace-bot@google.com"
