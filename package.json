@@ -1,5 +1,5 @@
 {
-  "name": "developer-tools",
+  "name": "google-workspace-developer-tools",
   "displayName": "Google Workspace Developer Tools",
   "description": "Preview Google Workspace Card JSON, lint OAuth2 scopes, and more.",
   "version": "0.1.1",
