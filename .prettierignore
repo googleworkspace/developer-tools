@@ -1,0 +1,17 @@
+# use biomejs
+**/*.ts
+**/*.mjs
+**/*.cjs
+**/*.js
+**/*.json
+
+# common ignore patterns
+**/pnpm-lock.yaml
+**/package-lock.json
+**/yarn.lock
+**/dist
+**/build
+**/coverage
+**/.turbo
+**/.cache
+**/node_modules

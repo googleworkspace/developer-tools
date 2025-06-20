@@ -1,0 +1,17 @@
+.changeset/**
+.github/**
+.gitignore
+.husky/**
+.prettierignore
+.vscode-test/**
+.vscode/**
+**/.vscode-test.*
+**/*.map
+**/*.ts
+**/eslint.config.mjs
+**/tsconfig.json
+biome.json
+node_modules/**
+pnpm-lock.yaml
+src/**
+vsc-extension-quickstart.md

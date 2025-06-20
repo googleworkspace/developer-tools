@@ -1,0 +1,53 @@
+# Copyright 2025 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Release
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+concurrency: ${{ github.workflow }}-${{ github.ref }}
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm build
+      - run: pnpm lint
+      - run: pnpm check
+      - run: pnpm test
+      - run: |
+          git config --global user.name "googleworkspace-bot"
+          git config --global user.email "googleworkspace-bot@google.com"
+      - uses: changesets/action@e0145edc7d9d8679003495b11f87bd8ef63c0cba # v1.5.3
+        id: changesets
+        env:
+          GITHUB_TOKEN: ${{secrets.GOOGLEWORKSPACE_BOT_TOKEN}}
+        with:
+          title: "chore: release"
+          commit: "chore: release"
+          commitMode: github-api
+          setupGitUser: false
+          publish: "pnpm ci:release"
+          version: "pnpm ci:version"

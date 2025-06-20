@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"ms-vscode.extension-test-runner",
+		"biomejs.biome",
+		"esbenp.prettier-vscode"
+	]
+}
