@@ -1,5 +1,11 @@
 # google-workspace-vscode
 
+## 0.1.2
+
+### Patch Changes
+
+- 3612d5b: Change name.
+
 ## 0.1.1
 
 ### Patch Changes
