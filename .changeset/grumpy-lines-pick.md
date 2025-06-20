@@ -1,5 +1,5 @@
 ---
-"developer-tools": patch
+"google-workspace-developer-tools": patch
 ---
 
 Change name.
