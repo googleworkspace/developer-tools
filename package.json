@@ -2,7 +2,7 @@
   "name": "developer-tools",
   "displayName": "Google Workspace Developer Tools",
   "description": "Preview Google Workspace Card JSON, lint OAuth2 scopes, and more.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "preview": true,
   "publisher": "google-workspace",
   "license": "Apache-2.0",
