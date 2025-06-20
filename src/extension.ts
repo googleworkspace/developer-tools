@@ -73,7 +73,6 @@ export function activate(context: vscode.ExtensionContext) {
 			provideHover(document, position, token) {
 				const line = document.lineAt(position.line);
 				const scopeRegex = /https:\/\/www.googleapis.com\/auth\/[a-zA-Z._-]+/g;
-				console.log(line.text);
 
 				for (const match of line.text.matchAll(scopeRegex)) {
 					const start = new vscode.Position(line.lineNumber, match.index ?? 0);
@@ -88,7 +87,6 @@ export function activate(context: vscode.ExtensionContext) {
 					}
 
 					const matchedScope = document.getText(range);
-					const info = SCOPES.get(matchedScope);
 					const markdownString = new vscode.MarkdownString(
 						getScopeMarkdown(matchedScope),
 					);

@@ -1,6 +1,6 @@
 {
-  "name": "google-workspace-vscode",
-  "displayName": "Google Workspace",
+  "name": "developer-tools",
+  "displayName": "Google Workspace Developer Tools",
   "description": "Preview Google Workspace Card JSON, lint OAuth2 scopes, and more.",
   "version": "0.1.0",
   "preview": true,
