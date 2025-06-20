@@ -34,3 +34,4 @@ jobs:
         if: runner.os == 'Linux'
       - run: pnpm test
         if: runner.os != 'Linux'
+      - run: pnpm ci:package
