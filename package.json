@@ -56,7 +56,7 @@
   ],
   "scripts": {
     "ci:release": "changeset publish && npm run ci:publish",
-    "ci:version": "changeset version && npm run install --lockfile-only --engine-strict=false",
+    "ci:version": "changeset version && npm i --lockfile-only --engine-strict=false",
     "ci:package": "vsce package",
     "ci:publish": "vsce publish",
     "vscode:prepublish": "npm run build",
