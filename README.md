@@ -6,6 +6,8 @@ This VS Code extension provides a set of tools to help Google Workspace develope
 
 - **OAuth2 Scope Linting**: Get warnings and additional information for Google Workspace [OAuth2 scopes](https://developers.google.com/identity/protocols/oauth2/scopes) in your code.
 
+  ![OAuth2 Scope Linting](./assets/scope-diagnostics.png)
+
 ## Usage
 
 ### OAuth2 Scope Linting
