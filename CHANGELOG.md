@@ -1,5 +1,11 @@
 # google-workspace-vscode
 
+## 0.2.0
+
+### Minor Changes
+
+- 0f73092: Switch to npm and temporarily remove card preview.
+
 ## 0.1.2
 
 ### Patch Changes
