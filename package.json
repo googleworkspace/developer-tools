@@ -55,14 +55,14 @@
     "onStartupFinished"
   ],
   "scripts": {
-    "ci:release": "changeset publish && pnpm ci:publish",
-    "ci:version": "changeset version && pnpm install --lockfile-only --engine-strict=false",
-    "ci:package": "vsce package --no-dependencies",
-    "ci:publish": "vsce publish --no-dependencies",
-    "vscode:prepublish": "pnpm build",
+    "ci:release": "changeset publish && npm run ci:publish",
+    "ci:version": "changeset version && npm run install --lockfile-only --engine-strict=false",
+    "ci:package": "vsce package",
+    "ci:publish": "vsce publish",
+    "vscode:prepublish": "npm run build",
     "build": "tsup",
     "dev": "tsup --watch",
-    "pretest": "pnpm build",
+    "pretest": "npm run build",
     "format": "prettier --write . && biome check --write .",
     "lint": "prettier --check . && biome check",
     "check": "tsc --noEmit",
@@ -83,7 +83,6 @@
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "pnpm@9.3.0",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -96,8 +95,5 @@
     "**/*.{html,yaml,yml,md}": [
       "prettier --write"
     ]
-  },
-  "dependencies": {
-    "@googleworkspace/card-dev-assist": "^0.4.0"
   }
 }

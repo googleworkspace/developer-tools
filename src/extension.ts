@@ -14,59 +14,10 @@
  * limitations under the License.
  */
 
-import { getBuilderURL, previewCard } from "@googleworkspace/card-dev-assist";
 import * as vscode from "vscode";
 import { SCOPES, ScopeClassification, getScopeMarkdown } from "./scopes.js";
 
-function getPreviewCardWebviewHtml({
-	url,
-	screenshot,
-}: { url: string; screenshot?: string }): string {
-	return `<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Card Preview</title>
-	</head>
-	<body class="vscode-light">
-		<h1>Card Preview</h1>
-		<p><a href="${url}" target="_blank">View in Card Builder</a></p>
-		${screenshot ? `<img src="data:image/png;base64,${screenshot}" alt="Card Screenshot" />` : "<p>Loading screenshot...</p>"}
-		
-	</body>
-	</html>`;
-}
-
 export function activate(context: vscode.ExtensionContext) {
-	const previewCardCommand = vscode.commands.registerTextEditorCommand(
-		"google-workspace.previewCard",
-		async ({ selection, document }) => {
-			const panel = vscode.window.createWebviewPanel(
-				"previewCard",
-				"Preview Google Workspace Card JSON",
-				vscode.ViewColumn.One,
-				{},
-			);
-
-			if (selection.isEmpty) {
-				vscode.window.showErrorMessage("Please select a card JSON to preview.");
-				return;
-			}
-
-			const card = JSON.parse(document.getText(selection));
-
-			const url = getBuilderURL(card);
-
-			panel.webview.html = getPreviewCardWebviewHtml({
-				url,
-			});
-
-			panel.webview.html = getPreviewCardWebviewHtml(await previewCard(card));
-		},
-	);
-	context.subscriptions.push(previewCardCommand);
-
 	const scopeHoverProvider = vscode.languages.registerHoverProvider(
 		{ scheme: "file" },
 		{
