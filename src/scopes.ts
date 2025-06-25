@@ -140,6 +140,8 @@ const SENSITIVE_SCOPES = [
 	"https://www.googleapis.com/auth/chat.app.spaces.create",
 	"https://www.googleapis.com/auth/chat.customemojis",
 	"https://www.googleapis.com/auth/chat.customemojis.readonly",
+	"https://www.googleapis.com/auth/documents",
+	"https://www.googleapis.com/auth/documents.readonly",
 	"https://www.googleapis.com/auth/chat.memberships",
 	"https://www.googleapis.com/auth/chat.memberships.app",
 	"https://www.googleapis.com/auth/chat.memberships.readonly",
