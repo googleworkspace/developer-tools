@@ -217,7 +217,7 @@ export function getScopeMarkdown(id: string): string {
 			});
 		}
 
-		suggestions.sort();
+		suggestions.sort((a, b) => b.sharedPrefix.length - a.sharedPrefix.length);
 
 		if (suggestions.length > 0) {
 			content.push("Consider these scopes:");
