@@ -1,5 +1,11 @@
 # google-workspace-vscode
 
+## 0.3.0
+
+### Minor Changes
+
+- 844bae6: Show alternative nonsensitive scopes.
+
 ## 0.2.1
 
 ### Patch Changes
