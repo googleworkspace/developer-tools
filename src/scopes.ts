@@ -140,6 +140,8 @@ const SENSITIVE_SCOPES = [
 	"https://www.googleapis.com/auth/chat.app.spaces.create",
 	"https://www.googleapis.com/auth/chat.customemojis",
 	"https://www.googleapis.com/auth/chat.customemojis.readonly",
+	"https://www.googleapis.com/auth/documents",
+	"https://www.googleapis.com/auth/documents.readonly",
 	"https://www.googleapis.com/auth/chat.memberships",
 	"https://www.googleapis.com/auth/chat.memberships.app",
 	"https://www.googleapis.com/auth/chat.memberships.readonly",
@@ -192,6 +194,40 @@ export function getScopeMarkdown(id: string): string {
 		content.push(
 			`This scope is ${scope.classification.toLowerCase()}. See [OAuth2 Verification](https://support.google.com/cloud/answer/13463073) for more information.`,
 		);
+
+		const suggestions: { id: string; sharedPrefix: string }[] = [];
+
+		for (const [altId, alt] of SCOPES) {
+			if (
+				alt.classification === ScopeClassification.SENSITIVE ||
+				alt.classification === ScopeClassification.RESTRICTED
+			) {
+				continue;
+			}
+
+			const sharedPrefix = getSharedPrefix(id, altId);
+
+			if (sharedPrefix.length < id.length) {
+				continue;
+			}
+
+			suggestions.push({
+				id: altId,
+				sharedPrefix,
+			});
+		}
+
+		suggestions.sort((a, b) => b.sharedPrefix.length - a.sharedPrefix.length);
+
+		if (suggestions.length > 0) {
+			content.push("Consider these scopes:");
+
+			for (const { id } of suggestions) {
+				content.push(
+					`- \`${id.replace("https://www.googleapis.com/auth/", "")}\` ${SCOPES.get(id)?.description ?? ""}`,
+				);
+			}
+		}
 	}
 
 	if (scope.apis.length > 0) {
@@ -205,4 +241,12 @@ export function getScopeMarkdown(id: string): string {
 	}
 
 	return content.join("\n\n");
+}
+
+function getSharedPrefix(a: string, b: string): string {
+	let i = 0;
+	while (i < a.length && i < b.length && a[i] === b[i]) {
+		i++;
+	}
+	return a.slice(0, i);
 }
