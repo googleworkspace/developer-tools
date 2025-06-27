@@ -1,5 +1,11 @@
 # google-workspace-vscode
 
+## 0.3.1
+
+### Patch Changes
+
+- 0e644fa: Support older versions of VS Code and its forks. Set to `v1.50.0` which is from September, 2020.
+
 ## 0.3.0
 
 ### Minor Changes
