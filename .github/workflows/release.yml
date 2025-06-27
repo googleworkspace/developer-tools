@@ -42,6 +42,7 @@ jobs:
         id: changesets
         env:
           GITHUB_TOKEN: ${{secrets.GOOGLEWORKSPACE_BOT_TOKEN}}
+          OVSX_PAT: ${{secrets.OVSX_PAT}}
           VSCE_PAT: ${{secrets.VSCE_PAT}}
         with:
           title: "chore: release"
