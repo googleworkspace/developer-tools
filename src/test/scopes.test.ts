@@ -15,16 +15,16 @@
  */
 
 import * as assert from "node:assert";
-import { getScopeMarkdown, SCOPES } from "../scopes.js";
+import { SCOPES, getScopeMarkdown } from "../scopes.js";
 
 suite("getScopeMarkdown", () => {
-  test("it returns markdown for a known scope", () => {
-    const markdown = getScopeMarkdown("https://www.googleapis.com/auth/drive");
-    assert.ok(markdown.includes("This scope is restricted."));
-  });
+	test("it returns markdown for a known scope", () => {
+		const markdown = getScopeMarkdown("https://www.googleapis.com/auth/drive");
+		assert.ok(markdown.includes("This scope is restricted."));
+	});
 
-  test("it returns markdown for an unknown scope", () => {
-    const markdown = getScopeMarkdown("https://example.com");
-    assert.strictEqual(markdown, "**https://example.com** (Unknown scope)");
-  });
+	test("it returns markdown for an unknown scope", () => {
+		const markdown = getScopeMarkdown("https://example.com");
+		assert.strictEqual(markdown, "**https://example.com** (Unknown scope)");
+	});
 });
