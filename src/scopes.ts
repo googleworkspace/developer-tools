@@ -30,7 +30,7 @@ export type ScopeClassification =
 type Api = {
 	title: string;
 	version: string | number | null;
-	documentation: string;
+	documentationLink: string;
 };
 
 type Scope = {
@@ -41,7 +41,7 @@ type Scope = {
 
 export const SCOPES = new Map<string, Scope>();
 
-for (const { title, version, documentation, scopes } of GOOGLE_APIS) {
+for (const { title, version, documentationLink, scopes } of GOOGLE_APIS) {
 	for (const { id, description } of scopes) {
 		console.log(
 			`Processing scope: ${id} - ${description} (${title} v${version})`,
@@ -61,9 +61,9 @@ for (const { title, version, documentation, scopes } of GOOGLE_APIS) {
 		}
 
 		scope.apis.push({
-			title: title,
-			version: version,
-			documentation: documentation,
+			title,
+			version,
+			documentationLink,
 		});
 	}
 }
@@ -234,7 +234,8 @@ export function getScopeMarkdown(id: string): string {
 		content.push("This scope is used by the following APIs:");
 		const apiList = scope.apis
 			.map(
-				(api) => `- [${api.title} ${api.version ?? ""}](${api.documentation})`,
+				(api) =>
+					`- [${api.title} ${api.version ?? ""}](${api.documentationLink})`,
 			)
 			.join("\n");
 		content.push(apiList);
