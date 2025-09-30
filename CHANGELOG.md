@@ -1,5 +1,12 @@
 # google-workspace-vscode
 
+## 0.3.2
+
+### Patch Changes
+
+- cf91699: Fix broken readme link.
+- cf91699: Automatically fetch APIs via Discovery Service
+
 ## 0.3.1
 
 ### Patch Changes
