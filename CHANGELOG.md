@@ -1,5 +1,11 @@
 # google-workspace-vscode
 
+## 0.4.0
+
+### Minor Changes
+
+- 887e5bf: Release new version not in preview.
+
 ## 0.3.2
 
 ### Patch Changes
