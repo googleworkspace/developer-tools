@@ -48,7 +48,7 @@ for (let i = 0; i < allApis.length; i += chunkSize) {
 							),
 						};
 					} catch (error) {
-						console.log(`Error fetching ${api.name}`);
+						console.log(`Error fetching ${api.discoveryLink}`);
 						console.log(error);
 					}
 				}
