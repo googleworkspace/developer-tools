@@ -29,7 +29,7 @@ You can install the Google Workspace Developer Tools extension in a few ways.
 
 Install the extension from your preferred marketplace:
 
-- [Visual Studio Marketplace](- https://marketplace.visualstudio.com/items?itemName=google-workspace.google-workspace-developer-tools)
+- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=google-workspace.google-workspace-developer-tools)
 - [Open VSX Registry](https://open-vsx.org/extension/google-workspace/google-workspace-developer-tools)
 
 ### Using the Command Line

@@ -59,6 +59,7 @@
     "vscode:prepublish": "npm run build",
     "build": "tsup",
     "dev": "tsup --watch",
+    "fetch-apis": "tsx scripts/fetch-apis.ts",
     "pretest": "npm run build",
     "format": "prettier --write . && biome check --write .",
     "lint": "prettier --check . && biome check",
@@ -74,11 +75,14 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.5.2",
     "@vscode/vsce": "^3.6.0",
+    "googleapis": "^160.0.0",
     "husky": "^9.1.7",
+    "ky": "^1.11.0",
     "lint-staged": "^16.1.0",
     "ovsx": "^0.10.4",
     "prettier": "^3.5.3",
     "tsup": "^8.5.0",
+    "tsx": "^4.20.6",
     "typescript": "^5.8.3"
   },
   "husky": {
@@ -93,6 +97,5 @@
     "**/*.{html,yaml,yml,md}": [
       "prettier --write"
     ]
-  },
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
+  }
 }
