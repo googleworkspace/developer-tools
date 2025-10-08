@@ -29,11 +29,11 @@
     "color": "#1e1e1e",
     "theme": "dark"
   },
-  "repository": "https://github.com/googleworkspace/language-tools",
+  "repository": "https://github.com/googleworkspace/developer-tools",
   "bugs": {
-    "url": "https://github.com/googleworkspace/language-tools/issues"
+    "url": "https://github.com/googleworkspace/developer-tools/issues"
   },
-  "homepage": "https://github.com/googleworkspace/language-tools",
+  "homepage": "https://github.com/googleworkspace/developer-tools",
   "engines": {
     "vscode": "^1.50.0"
   },
