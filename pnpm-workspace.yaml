@@ -1,21 +1,21 @@
 packages:
   - packages/*
+
 catalog:
   "@biomejs/biome": 1.9.4
   "@changesets/cli": ^2.29.7
   "@types/mocha": ^10.0.10
   "@types/node": 20.x
-  "@types/vscode": ^1.50.0
   "@vscode/test-cli": ^0.0.10
   "@vscode/test-electron": ^2.5.2
   "@vscode/vsce": ^3.6.0
   googleapis: ^160.0.0
   husky: ^9.1.7
   ky: ^1.11.0
-  lint-staged: ^16.1.0
+  lint-staged: ^16.2.3
   ovsx: ^0.10.4
-  prettier: ^3.5.3
+  prettier: ^3.6.2
   tsup: ^8.5.0
   tsx: ^4.20.6
   turbo: ^2.5.8
-  typescript: ^5.8.3
+  typescript: ^5.9.3

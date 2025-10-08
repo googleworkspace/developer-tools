@@ -64,7 +64,7 @@
   "devDependencies": {
     "@types/mocha": "catalog:",
     "@types/node": "catalog:",
-    "@types/vscode": "catalog:",
+    "@types/vscode": "^1.50.0",
     "@vscode/test-cli": "catalog:",
     "@vscode/test-electron": "catalog:",
     "@vscode/vsce": "catalog:",
