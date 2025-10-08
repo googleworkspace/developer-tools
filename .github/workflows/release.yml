@@ -53,5 +53,5 @@ jobs:
           commit: "chore: release"
           commitMode: github-api
           setupGitUser: false
-          publish: "pnpm ci:release"
+          publish: "pnpm ci:publish"
           version: "pnpm ci:version"

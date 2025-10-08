@@ -9,6 +9,7 @@
 			"dependsOn": ["^build"]
 		},
 		"ci:package": {},
+		"ci:publish": {},
 		"ci:update": {
 			"outputs": ["packages/vscode-extension/src/apis.ts"]
 		},
