@@ -40,12 +40,7 @@
   "type": "module",
   "main": "./out/extension.cjs",
   "contributes": {
-    "commands": [
-      {
-        "command": "google-workspace.previewCard",
-        "title": "Preview Google Workspace Card JSON"
-      }
-    ]
+    "commands": []
   },
   "activationEvents": [
     "onStartupFinished"
