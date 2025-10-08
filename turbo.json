@@ -5,16 +5,17 @@
 			"dependsOn": ["^build"],
 			"outputs": ["dist/**", "out/**"]
 		},
-		"dev": {
-			"cache": false
-		},
 		"check": {
 			"dependsOn": ["^build"]
 		},
-		"test": {},
-		"ci:version": {},
+		"ci:package": {},
 		"ci:update": {
 			"outputs": ["packages/vscode-extension/src/apis.ts"]
-		}
+		},
+		"ci:version": {},
+		"dev": {
+			"cache": false
+		},
+		"test": {}
 	}
 }
