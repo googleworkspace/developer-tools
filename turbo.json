@@ -9,7 +9,9 @@
 			"dependsOn": ["^build"]
 		},
 		"ci:package": {},
-		"ci:publish": {},
+		"ci:publish": {
+			"passThroughEnv": ["VSCE_PAT", "GITHUB_TOKEN", "OVSX_PAT"]
+		},
 		"ci:update": {
 			"outputs": ["packages/vscode-extension/src/apis.ts"]
 		},
