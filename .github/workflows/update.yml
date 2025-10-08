@@ -29,6 +29,9 @@ jobs:
           cache: "pnpm"
       - run: pnpm i
       - run: pnpm ci:update
+      - run: pnpm lint
+      - run: pnpm check
+      - run: pnpm test
       - name: Check for changes
         id: changes
         uses: tj-actions/changed-files@24d32ffd492484c1d75e0c0b894501ddb9d30d62 # v47.0.0

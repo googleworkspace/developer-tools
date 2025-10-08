@@ -36,6 +36,7 @@ jobs:
       - run: pnpm i
       - run: pnpm build
       - run: pnpm lint
+      - run: pnpm check
       - run: pnpm test
       - run: pnpm ci:package
       - run: |

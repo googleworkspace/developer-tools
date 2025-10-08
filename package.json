@@ -6,7 +6,7 @@
     "check": "turbo check",
     "ci:package": "turbo run ci:package",
     "ci:release": "turbo run ci:release",
-    "ci:update": "turbo run fetch-apis",
+    "ci:update": "turbo run ci:update",
     "ci:version": "changeset version && pnpm install --lockfile-only",
     "format": "prettier --write . && biome check --write .",
     "lint": "prettier --write . && biome check --write .",
