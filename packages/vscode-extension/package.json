@@ -29,11 +29,11 @@
     "color": "#1e1e1e",
     "theme": "dark"
   },
-  "repository": "https://github.com/googleworkspace/vscode-extension",
+  "repository": "https://github.com/googleworkspace/language-tools",
   "bugs": {
-    "url": "https://github.com/googleworkspace/vscode-extension/issues"
+    "url": "https://github.com/googleworkspace/language-tools/issues"
   },
-  "homepage": "https://github.com/googleworkspace/vscode-extension",
+  "homepage": "https://github.com/googleworkspace/language-tools",
   "engines": {
     "vscode": "^1.50.0"
   },
