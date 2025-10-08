@@ -1,5 +1,5 @@
 {
-  "name": "google-workspace-vscode-extension",
+  "name": "google-workspace-developer-tools",
   "displayName": "Google Workspace Developer Tools",
   "description": "Lint Google Workspace OAuth2 scopes and more.",
   "version": "0.4.1",
