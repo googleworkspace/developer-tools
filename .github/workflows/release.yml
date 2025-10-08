@@ -36,7 +36,7 @@ jobs:
       - run: pnpm i
       - run: pnpm build
       - run: pnpm lint
-      - run: pnpm test
+      - run: xvfb-run -a pnpm test
       - run: pnpm --filter @google-workspace/vscode-extension run ci:package
       - run: |
           git config --global user.name "googleworkspace-bot"
