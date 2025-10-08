@@ -22,6 +22,19 @@ use GitHub pull requests for this purpose. Consult
 [GitHub Help](https://help.github.com/articles/about-pull-requests/) for more
 information on using pull requests.
 
+## Changesets
+
+This project uses [Changesets](https://github.com/changesets/changesets) to manage releases.
+If you are making a change that should be included in the release notes, you must add a changeset.
+
+To add a changeset, run the following command:
+
+```sh
+pnpm changeset
+```
+
+You will be prompted to select the packages that have been changed, the type of change (major, minor, or patch), and to provide a description of the change.
+
 ## Community Guidelines
 
 This project follows [Google's Open Source Community

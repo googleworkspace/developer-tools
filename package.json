@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "changeset": "changeset",
     "check": "turbo check",
     "ci:package": "turbo run ci:package",
     "ci:release": "turbo run ci:release",
