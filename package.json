@@ -4,6 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "check": "turbo check",
+    "ci:package": "turbo run ci:package",
     "ci:release": "turbo run ci:release",
     "ci:update": "turbo run fetch-apis",
     "ci:version": "changeset version && pnpm install --lockfile-only",
