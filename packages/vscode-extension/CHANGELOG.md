@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.5.0
+
+### Minor Changes
+
+- 364aa2f: Register Google Workspace Developer MCP Server in extension.
+
 ## 0.4.2
 
 ### Patch Changes
