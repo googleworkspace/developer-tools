@@ -3,6 +3,7 @@
 .gitignore
 .husky/**
 .prettierignore
+.turbo/**
 .vscode-test/**
 .vscode/**
 **/.vscode-test.*
@@ -14,4 +15,5 @@ biome.json
 node_modules/**
 pnpm-lock.yaml
 src/**
+tsup.config.mjs
 vsc-extension-quickstart.md
