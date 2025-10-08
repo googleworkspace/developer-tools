@@ -57,7 +57,7 @@
     "ci:publish": "ovsx publish --skip-duplicate && vsce publish --skip-duplicate",
     "ci:update": "tsx scripts/fetch-apis.ts",
     "dev": "tsup --watch",
-    "pretest": "npm run build",
+    "pretest": "pnpm build",
     "test": "vscode-test",
     "vscode:prepublish": "tsup"
   },
