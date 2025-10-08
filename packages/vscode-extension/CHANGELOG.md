@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.4.2
+
+### Patch Changes
+
+- d6f7ef5: Fix release process.
+
 ## 0.4.1
 
 ### Patch Changes
