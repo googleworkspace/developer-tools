@@ -1,0 +1,21 @@
+{
+	"$schema": "https://turbo.build/schema.json",
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"],
+			"outputs": ["dist/**", "out/**"]
+		},
+		"dev": {
+			"cache": false
+		},
+		"check": {
+			"dependsOn": ["^build"]
+		},
+		"test": {},
+		"ci:release": {},
+		"ci:version": {},
+		"fetch-apis": {
+			"outputs": ["packages/vscode-extension/src/apis.ts"]
+		}
+	}
+}

@@ -1,0 +1,78 @@
+{
+  "name": "@google-workspace/vscode-extension",
+  "displayName": "Google Workspace Developer Tools",
+  "description": "Lint Google Workspace OAuth2 scopes and more.",
+  "version": "0.4.0",
+  "publisher": "google-workspace",
+  "license": "Apache-2.0",
+  "private": true,
+  "author": {
+    "name": "Justin Poehnelt",
+    "email": "jpoehnelt@google.com",
+    "url": "https://justin.poehnelt.com"
+  },
+  "categories": [
+    "Linters",
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "google",
+    "workspace",
+    "card",
+    "json",
+    "scopes",
+    "oauth2"
+  ],
+  "icon": "assets/icon_128.png",
+  "galleryBanner": {
+    "color": "#1e1e1e",
+    "theme": "dark"
+  },
+  "repository": "https://github.com/googleworkspace/vscode-extension",
+  "bugs": {
+    "url": "https://github.com/googleworkspace/vscode-extension/issues"
+  },
+  "homepage": "https://github.com/googleworkspace/vscode-extension",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "type": "module",
+  "main": "./out/extension.cjs",
+  "contributes": {
+    "commands": [
+      {
+        "command": "google-workspace.previewCard",
+        "title": "Preview Google Workspace Card JSON"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "check": "tsc --noEmit",
+    "ci:package": "vsce package",
+    "ci:publish": "ovsx publish --skip-duplicate && vsce publish --skip-duplicate",
+    "ci:update": "tsx scripts/fetch-apis.ts",
+    "dev": "tsup --watch",
+    "pretest": "npm run build",
+    "test": "vscode-test",
+    "vscode:prepublish": "tsup"
+  },
+  "devDependencies": {
+    "@types/mocha": "catalog:",
+    "@types/node": "catalog:",
+    "@types/vscode": "catalog:",
+    "@vscode/test-cli": "catalog:",
+    "@vscode/test-electron": "catalog:",
+    "@vscode/vsce": "catalog:",
+    "googleapis": "catalog:",
+    "ky": "catalog:",
+    "ovsx": "catalog:",
+    "tsup": "catalog:",
+    "tsx": "catalog:",
+    "typescript": "catalog:"
+  }
+}

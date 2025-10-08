@@ -1,4 +1,4 @@
 #!/bin/sh
 
-npm run lint
-npm run check
+pnpm run lint
+pnpm run check
