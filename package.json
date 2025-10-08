@@ -6,7 +6,7 @@
     "changeset": "changeset",
     "check": "turbo check",
     "ci:package": "turbo run ci:package",
-    "ci:publish": "turbo run ci:publish",
+    "ci:publish": "changeset publish && turbo run ci:publish",
     "ci:update": "turbo run ci:update",
     "ci:version": "changeset version && pnpm install --lockfile-only",
     "format": "prettier --write . && biome check --write .",
