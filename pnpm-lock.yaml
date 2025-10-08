@@ -93,7 +93,7 @@ importers:
         specifier: 'catalog:'
         version: 20.19.19
       '@types/vscode':
-        specifier: ^1.50.0
+        specifier: ^1.82.0
         version: 1.104.0
       '@vscode/test-cli':
         specifier: 'catalog:'
