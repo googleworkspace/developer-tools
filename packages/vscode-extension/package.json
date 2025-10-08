@@ -58,7 +58,7 @@
     "ci:update": "tsx scripts/fetch-apis.ts",
     "dev": "tsup --watch",
     "pretest": "pnpm build",
-    "test": "vscode-test",
+    "test": "xvfb-run -a vscode-test",
     "vscode:prepublish": "tsup"
   },
   "devDependencies": {

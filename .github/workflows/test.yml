@@ -30,5 +30,5 @@ jobs:
       - run: pnpm i
       - run: pnpm build
       - run: pnpm lint
-      - run: xvfb-run -a pnpm test
-      - run: pnpm --filter @google-workspace/vscode-extension run ci:package
+      - run: pnpm test
+      - run: pnpm ci:package

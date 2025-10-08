@@ -11,12 +11,9 @@
 		"check": {
 			"dependsOn": ["^build"]
 		},
-		"test": {
-			"outputs": [],
-			"passThroughEnv": ["DISPLAY"]
-		},
+		"test": {},
 		"ci:version": {},
-		"fetch-apis": {
+		"ci:update": {
 			"outputs": ["packages/vscode-extension/src/apis.ts"]
 		}
 	}

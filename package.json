@@ -28,7 +28,7 @@
   },
   "lint-staged": {
     "**/*.{js,ts,json,mjs,cjs}": [
-      "biome check --write"
+      "biome check --write --no-errors-on-unmatched"
     ],
     "**/*.{html,yaml,yml,md}": [
       "prettier --write"
