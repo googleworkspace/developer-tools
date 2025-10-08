@@ -18,26 +18,29 @@ import * as vscode from "vscode";
 import { SCOPES, ScopeClassification, getScopeMarkdown } from "./scopes.js";
 
 export function activate(context: vscode.ExtensionContext) {
-	context.subscriptions.push(
-		vscode.lm.registerMcpServerDefinitionProvider(
-			"google-workspace-developer",
-			{
-				provideMcpServerDefinitions: async () => {
-					return [
-						new vscode.McpHttpServerDefinition(
-							"google-workspace-developer",
-							vscode.Uri.parse("https://workspace-developer.goog/mcp"),
-						),
-					];
+	if (vscode.lm.registerMcpServerDefinitionProvider) {
+		context.subscriptions.push(
+			vscode.lm?.registerMcpServerDefinitionProvider(
+				"google-workspace-developer",
+				{
+					provideMcpServerDefinitions: async () => {
+						return [
+							new vscode.McpHttpServerDefinition(
+								"google-workspace-developer",
+								vscode.Uri.parse("https://workspace-developer.goog/mcp"),
+							),
+						];
+					},
+					resolveMcpServerDefinition: async (
+						server: vscode.McpServerDefinition,
+					) => {
+						return server;
+					},
 				},
-				resolveMcpServerDefinition: async (
-					server: vscode.McpServerDefinition,
-				) => {
-					return server;
-				},
-			},
-		),
-	);
+			),
+		);
+	}
+
 	const scopeHoverProvider = vscode.languages.registerHoverProvider(
 		{ scheme: "file" },
 		{

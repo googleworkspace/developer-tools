@@ -58,6 +58,9 @@ catalogs:
       specifier: ^5.9.3
       version: 5.9.3
 
+overrides:
+  '@types/vscode': ^1.82.0
+
 importers:
 
   .:
