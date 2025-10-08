@@ -1,88 +1,27 @@
 {
-  "name": "google-workspace-developer-tools",
-  "displayName": "Google Workspace Developer Tools",
-  "description": "Lint Google Workspace OAuth2 scopes and more.",
-  "version": "0.4.0",
-  "publisher": "google-workspace",
-  "license": "Apache-2.0",
+  "name": "google-workspace-developer-tools-monorepo",
   "private": true,
-  "author": {
-    "name": "Justin Poehnelt",
-    "email": "jpoehnelt@google.com",
-    "url": "https://justin.poehnelt.com"
-  },
-  "categories": [
-    "Linters",
-    "Visualization",
-    "Other"
-  ],
-  "keywords": [
-    "google",
-    "workspace",
-    "card",
-    "json",
-    "scopes",
-    "oauth2"
-  ],
-  "icon": "assets/icon_128.png",
-  "galleryBanner": {
-    "color": "#1e1e1e",
-    "theme": "dark"
-  },
-  "repository": "https://github.com/googleworkspace/vscode-extension",
-  "bugs": {
-    "url": "https://github.com/googleworkspace/vscode-extension/issues"
-  },
-  "homepage": "https://github.com/googleworkspace/vscode-extension",
-  "engines": {
-    "vscode": "^1.50.0"
-  },
-  "type": "module",
-  "main": "./out/extension.cjs",
-  "contributes": {
-    "commands": [
-      {
-        "command": "google-workspace.previewCard",
-        "title": "Preview Google Workspace Card JSON"
-      }
-    ]
-  },
-  "activationEvents": [
-    "onStartupFinished"
-  ],
   "scripts": {
-    "ci:release": "changeset publish && npm run ci:publish",
-    "ci:version": "changeset version && npm i --lockfile-only --engine-strict=false",
-    "ci:package": "vsce package",
-    "ci:publish": "ovsx publish --skip-duplicate && vsce publish --skip-duplicate",
-    "vscode:prepublish": "npm run build",
-    "build": "tsup",
-    "dev": "tsup --watch",
-    "fetch-apis": "tsx scripts/fetch-apis.ts",
-    "pretest": "npm run build",
+    "build": "turbo build",
+    "changeset": "changeset",
+    "check": "turbo check",
+    "ci:package": "turbo run ci:package",
+    "ci:release": "turbo run ci:release",
+    "ci:update": "turbo run ci:update",
+    "ci:version": "changeset version && pnpm install --lockfile-only",
     "format": "prettier --write . && biome check --write .",
-    "lint": "prettier --check . && biome check",
-    "check": "tsc --noEmit",
-    "test": "vscode-test"
+    "lint": "prettier --write . && biome check --write .",
+    "prepare": "husky",
+    "test": "turbo test"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@changesets/cli": "^2.29.7",
-    "@types/mocha": "^10.0.10",
-    "@types/node": "20.x",
-    "@types/vscode": "^1.50.0",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.5.2",
-    "@vscode/vsce": "^3.6.0",
-    "googleapis": "^160.0.0",
-    "husky": "^9.1.7",
-    "ky": "^1.11.0",
-    "lint-staged": "^16.1.0",
-    "ovsx": "^0.10.4",
-    "prettier": "^3.5.3",
-    "tsup": "^8.5.0",
-    "tsx": "^4.20.6",
-    "typescript": "^5.8.3"
+    "@biomejs/biome": "catalog:",
+    "@changesets/cli": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:"
   },
   "husky": {
     "hooks": {
@@ -90,11 +29,12 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,ts}": [
-      "biome check --write"
+    "**/*.{js,ts,json,mjs,cjs}": [
+      "biome check --write --no-errors-on-unmatched"
     ],
     "**/*.{html,yaml,yml,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "packageManager": "pnpm@10.18.1+sha512.77a884a165cbba2d8d1c19e3b4880eee6d2fcabd0d879121e282196b80042351d5eb3ca0935fa599da1dc51265cc68816ad2bddd2a2de5ea9fdf92adbec7cd34"
 }
