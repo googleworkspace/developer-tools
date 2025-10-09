@@ -1,43 +1,136 @@
 # Google Workspace Developer Tools
 
-This VS Code extension provides a set of tools to help Google Workspace developers.
+[![Visual Studio Marketplace](https://img.shields.io/visual-studio-marketplace/v/google-workspace.google-workspace-developer-tools?label=VS%20Marketplace)](https://marketplace.visualstudio.com/items?itemName=google-workspace.google-workspace-developer-tools)
+[![Open VSX](https://img.shields.io/open-vsx/v/google-workspace/google-workspace-developer-tools?label=Open%20VSX)](https://open-vsx.org/extension/google-workspace/google-workspace-developer-tools)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## Features
+Enhance your Google Workspace development experience with intelligent OAuth2 scope linting, hover documentation, and AI-powered development tools directly in Visual Studio Code.
 
-- **OAuth2 Scope Linting**: Get warnings and additional information for Google Workspace [OAuth2 scopes](https://developers.google.com/identity/protocols/oauth2/scopes) in your code.
+## ✨ Features
 
-  ![OAuth2 Scope Linting](https://raw.githubusercontent.com/googleworkspace/vscode-extension/main/packages/vscode-extension/assets/scope-diagnostics.png)
+### 🔐 OAuth2 Scope Intelligence
 
-- **MCP (Model Context Protocol) Server**: Registers the Google Workspace Developer Tools MCP server, enabling enhanced development tools.
+Automatically validate and document Google Workspace OAuth2 scopes in your code:
 
-## Usage
+- **Real-time Validation**: Instantly identify invalid or unknown OAuth2 scope URLs
+- **Security Classification**: Visual warnings for restricted and sensitive scopes
+- **Hover Documentation**: See scope descriptions, associated APIs, and documentation links on hover
+- **Multi-API Support**: Coverage for all Google Workspace APIs (Gmail, Drive, Calendar, Chat, Admin, and more)
 
-### OAuth2 Scope Linting
+![OAuth2 Scope Linting](https://raw.githubusercontent.com/googleworkspace/vscode-extension/main/packages/vscode-extension/assets/scope-diagnostics.png)
 
-Warnings and suggestions will automatically appear for OAuth2 scopes in your code.
+**Scope Classifications:**
 
-## Installation
+- 🔴 **Restricted**: Scopes requiring additional verification (e.g., `drive`, `gmail.modify`)
+- 🟡 **Sensitive**: Scopes accessing sensitive user data (e.g., `gmail.readonly`, `calendar`)
+- 🟢 **Non-Sensitive**: Basic access scopes (e.g., `userinfo.email`, `userinfo.profile`)
 
-You can install the Google Workspace Developer Tools extension in a few ways.
+### 🤖 MCP (Model Context Protocol) Server
 
-### From within VS Code (Recommended)
+Integrated support for AI-powered development through the Google Workspace Developer Tools MCP server:
 
-1. Launch Visual Studio Code.
-2. Go to the **Extensions** view (`Ctrl+Shift+X` or `Cmd+Shift+X`).
-3. Search for `Google Workspace Developer Tools`.
-4. Click **Install**.
+- Access Google Workspace API documentation directly in your AI coding assistant
+- Get context-aware suggestions for Google Workspace development
+- Enhanced Copilot and other AI tool capabilities for Google Workspace projects
 
-### From a Marketplace
+## 🚀 Quick Start
 
-Install the extension from your preferred marketplace:
+### Installation
 
-- [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=google-workspace.google-workspace-developer-tools)
-- [Open VSX Registry](https://open-vsx.org/extension/google-workspace/google-workspace-developer-tools)
+#### From VS Code (Recommended)
 
-### Using the Command Line
+1. Open Visual Studio Code
+2. Press `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (macOS)
+3. Search for **"Google Workspace Developer Tools"**
+4. Click **Install**
 
-If you have the `code` command-line tool installed, you can install the extension with this command:
+#### From Marketplace
 
-```sh
+- **[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=google-workspace.google-workspace-developer-tools)**
+- **[Open VSX Registry](https://open-vsx.org/extension/google-workspace/google-workspace-developer-tools)**
+
+#### Command Line
+
+```bash
 code --install-extension google-workspace.google-workspace-developer-tools
 ```
+
+### Usage
+
+#### OAuth2 Scope Linting
+
+The extension works automatically once installed:
+
+1. **Write Code**: Include Google OAuth2 scope URLs in your code:
+
+   ```javascript
+   const SCOPES = [
+     "https://www.googleapis.com/auth/gmail.readonly",
+     "https://www.googleapis.com/auth/drive.file",
+   ];
+   ```
+
+2. **Get Instant Feedback**:
+   - Warnings appear for restricted/sensitive scopes
+   - Invalid scopes are highlighted with error diagnostics
+   - Hover over any scope for detailed information
+
+3. **Learn More**: Click on scope URLs in hover tooltips to access official documentation
+
+**Supported File Types**: Works in all text files including JavaScript, TypeScript, Python, JSON, YAML, and more.
+
+## 🔍 How It Works
+
+The extension:
+
+1. Scans your code for Google OAuth2 scope URLs (`https://www.googleapis.com/auth/*`)
+2. Validates them against the official Google API registry
+3. Provides real-time diagnostics based on scope classification
+4. Offers rich hover information with:
+   - Scope description
+   - Security classification
+   - Associated Google Workspace APIs
+   - Links to API documentation
+
+## 📋 Requirements
+
+- Visual Studio Code version 1.50.0 or higher
+- No additional dependencies required
+
+## ⚙️ Extension Settings
+
+This extension works out of the box with no configuration required. Future versions may include customizable settings.
+
+## 🐛 Known Issues
+
+Please report issues on our [GitHub Issues page](https://github.com/googleworkspace/developer-tools/issues).
+
+## 📝 Release Notes
+
+See [CHANGELOG.md](./CHANGELOG.md) for detailed release notes and version history.
+
+### Recent Updates
+
+- **0.5.x**: Enhanced scope validation and MCP server integration
+- **0.4.x**: Added support for additional Google Workspace APIs
+- **0.3.x**: Initial public release with OAuth2 scope linting
+
+## 🤝 Contributing
+
+We welcome contributions! This extension is part of the [Google Workspace Developer Tools](https://github.com/googleworkspace/developer-tools) monorepo.
+
+## 📚 Resources
+
+- [Google Workspace APIs Documentation](https://developers.google.com/workspace)
+- [OAuth 2.0 Scopes Reference](https://developers.google.com/identity/protocols/oauth2/scopes)
+- [GitHub Repository](https://github.com/googleworkspace/developer-tools)
+
+## 📄 License
+
+Apache 2.0 License - see [LICENSE](./LICENSE) for details.
+
+## 💬 Support
+
+- 🐛 [Report a Bug](https://github.com/googleworkspace/developer-tools/issues)
+- 💡 [Request a Feature](https://github.com/googleworkspace/developer-tools/issues)
+- 📖 [View Documentation](https://github.com/googleworkspace/developer-tools)
