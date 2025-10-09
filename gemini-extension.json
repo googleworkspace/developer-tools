@@ -1,0 +1,9 @@
+{
+	"name": "google-workspace-developer-tools",
+	"version": "latest",
+	"mcpServers": {
+		"workspace-developer": {
+			"httpUrl": "https://workspace-developer.goog/mcp"
+		}
+	}
+}
