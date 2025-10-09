@@ -5,3 +5,5 @@ node_modules
 *.vsix
 .env
 .turbo
+**/key.pem
+.mcpregistry*

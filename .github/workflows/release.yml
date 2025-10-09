@@ -55,3 +55,12 @@ jobs:
           setupGitUser: false
           publish: "pnpm ci:publish"
           version: "pnpm ci:version"
+      - name: Install MCP Publisher
+        run: |
+          curl -L "https://github.com/modelcontextprotocol/registry/releases/download/latest/mcp-publisher_$(uname -s | tr '[:upper:]' '[:lower:]')_$(uname -m | sed 's/x86_64/amd64/;s/aarch64/arm64/').tar.gz" | tar xz mcp-publisher
+      - name: Login to MCP Registry
+        run: |
+          echo "${{ secrets.MCP_REGISTRY_PRIVATE_KEY }}" > key.pem
+          mcp-publisher login dns --domain workspace-developer.goog --private-key-file key.pem
+      - name: Publish to MCP Registry
+        run: ./mcp-publisher publish
