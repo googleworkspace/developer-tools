@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.5.1
+
+### Patch Changes
+
+- dc49bf8: Add missing license to extension.
+
 ## 0.5.0
 
 ### Minor Changes
