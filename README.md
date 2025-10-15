@@ -38,6 +38,8 @@ gemini extensions install \
   "https://github.com/googleworkspace/developer-tools"
 ```
 
+![Extension Demo](https://raw.githubusercontent.com/googleworkspace/developer-tools/refs/heads/main/docs/gemini.gif)
+
 ## 📦 Packages
 
 ### VS Code Extension (`packages/vscode-extension`)
