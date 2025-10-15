@@ -1,0 +1,13 @@
+{
+	"$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+	"name": "goog.workspace-developer/developer-tools",
+	"title": "Google Workspace Developer Tools",
+	"description": "Provides tools for searching Google Workspace documentation and much more.",
+	"version": "1.0.0",
+	"remotes": [
+		{
+			"type": "streamable-http",
+			"url": "https://workspace-developer.goog/mcp"
+		}
+	]
+}
