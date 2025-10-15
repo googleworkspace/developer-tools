@@ -29,6 +29,8 @@ code --install-extension google-workspace.google-workspace-developer-tools
 - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=google-workspace.google-workspace-developer-tools)
 - [Open VSX Registry](https://open-vsx.org/extension/google-workspace/google-workspace-developer-tools)
 
+[Learn more →](./packages/vscode-extension)
+
 ### Gemini CLI Extension
 
 If you have the `gemini` command-line tool installed:
