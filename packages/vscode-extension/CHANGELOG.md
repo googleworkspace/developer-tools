@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.6.0
+
+### Minor Changes
+
+- 3892fcf: Implement code completion for OAuth2 scopes.
+
 ## 0.5.4
 
 ### Patch Changes
