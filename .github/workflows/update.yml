@@ -31,7 +31,8 @@ jobs:
       - run: pnpm ci:update
       - run: pnpm lint
       - run: pnpm check
-      - run: xvfb-run -a --server-args="-screen 0 1024x768x24" pnpm test
+      - uses: ./.github/actions/setup-xvfb
+      - run: pnpm test
       - name: Check for changes
         id: changes
         uses: tj-actions/changed-files@24d32ffd492484c1d75e0c0b894501ddb9d30d62 # v47.0.0
