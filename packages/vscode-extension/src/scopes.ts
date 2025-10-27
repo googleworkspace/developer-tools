@@ -43,10 +43,6 @@ export const SCOPES = new Map<string, Scope>();
 
 for (const { title, version, documentationLink, scopes } of GOOGLE_APIS || []) {
 	for (const { id, description } of scopes || []) {
-		console.log(
-			`Processing scope: ${id} - ${description} (${title} v${version})`,
-		);
-
 		if (!SCOPES.has(id)) {
 			SCOPES.set(id, {
 				description: description,

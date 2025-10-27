@@ -2,7 +2,7 @@
   "name": "google-workspace-developer-tools",
   "displayName": "Google Workspace Developer Tools",
   "description": "Lint Google Workspace OAuth2 scopes and more.",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "publisher": "google-workspace",
   "license": "Apache-2.0",
   "private": true,
@@ -54,13 +54,13 @@
   "scripts": {
     "build": "tsup",
     "check": "tsc --noEmit",
-    "ci:package": "vsce package",
+    "ci:package": "vsce package --no-dependencies",
     "ci:publish": "ovsx publish --skip-duplicate && vsce publish --skip-duplicate",
     "ci:version": "changeset version && pnpm i --lockfile-only --engine-strict=false",
     "ci:update": "tsx scripts/fetch-apis.ts",
     "dev": "tsup --watch",
     "pretest": "pnpm build",
-    "test": "xvfb-run -a vscode-test",
+    "test": "vscode-test",
     "vscode:prepublish": "tsup"
   },
   "devDependencies": {
@@ -76,5 +76,8 @@
     "tsup": "catalog:",
     "tsx": "catalog:",
     "typescript": "catalog:"
+  },
+  "dependencies": {
+    "vitest": "^4.0.4"
   }
 }

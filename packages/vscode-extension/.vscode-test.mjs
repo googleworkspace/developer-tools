@@ -18,4 +18,6 @@ import { defineConfig } from "@vscode/test-cli";
 
 export default defineConfig({
 	files: "out/test/**/*.test.cjs",
+	launchArgs: ["--user-data-dir=/tmp/vscode-test-user-data"],
+	version: "insiders",
 });
