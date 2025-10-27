@@ -31,5 +31,5 @@ jobs:
       - run: pnpm build
       - run: pnpm lint
       - run: pnpm check
-      - run: pnpm test
+      - run: xvfb-run -a pnpm test
       - run: pnpm ci:package

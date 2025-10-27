@@ -17,6 +17,35 @@
 import * as vscode from "vscode";
 import { SCOPES, ScopeClassification, getScopeMarkdown } from "./scopes.js";
 
+export function scopeCompletion(
+	document: vscode.TextDocument,
+	position: vscode.Position,
+): vscode.CompletionItem[] {
+	const completionItems: vscode.CompletionItem[] = [];
+
+	const lineText = document.lineAt(position.line).text;
+	const textBeforeCursor = lineText.substring(0, position.character);
+
+	const match = textBeforeCursor.match(
+		/(https:\/\/www\.googleapis\.com\/auth\/[a-zA-Z._-]*)$/,
+	);
+
+	if (!match) {
+		return completionItems;
+	}
+
+	for (const [scope] of SCOPES.entries()) {
+		if (scope.startsWith(match[1])) {
+			const item = new vscode.CompletionItem(scope.split("/").pop() ?? scope);
+			item.insertText = scope.replace(match[1], "");
+			completionItems.push(item);
+		}
+	}
+	return completionItems.sort((a, b) =>
+		String(a.label).localeCompare(String(b.label)),
+	);
+}
+
 export function activate(context: vscode.ExtensionContext) {
 	if (vscode.lm.registerMcpServerDefinitionProvider) {
 		context.subscriptions.push(
@@ -76,6 +105,20 @@ export function activate(context: vscode.ExtensionContext) {
 	const scopeDiagnostics =
 		vscode.languages.createDiagnosticCollection("scopes");
 	context.subscriptions.push(scopeDiagnostics);
+
+	const scopeCompletionProvider =
+		vscode.languages.registerCompletionItemProvider(
+			{ scheme: "file" },
+			{
+				provideCompletionItems(document, position) {
+					console.log(position);
+					return scopeCompletion(document, position);
+				},
+			},
+			"/",
+			".",
+		);
+	context.subscriptions.push(scopeCompletionProvider);
 
 	function updateDiagnostics(
 		document: vscode.TextDocument,
