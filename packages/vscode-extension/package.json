@@ -55,7 +55,7 @@
     "build": "tsup",
     "check": "tsc --noEmit",
     "ci:package": "vsce package --no-dependencies",
-    "ci:publish": "ovsx publish --skip-duplicate && vsce publish --skip-duplicate",
+    "ci:publish": "ovsx publish --skip-duplicate --no-dependencies && vsce publish --skip-duplicate --no-dependencies",
     "ci:version": "changeset version && pnpm i --lockfile-only --engine-strict=false",
     "ci:update": "tsx scripts/fetch-apis.ts",
     "dev": "tsup --watch",
