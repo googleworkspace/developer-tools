@@ -30,7 +30,7 @@ export type ScopeClassification =
 type Api = {
 	title: string;
 	version: string | number | null;
-	documentationLink: string;
+	documentationLink?: string;
 };
 
 type Scope = {
@@ -41,8 +41,8 @@ type Scope = {
 
 export const SCOPES = new Map<string, Scope>();
 
-for (const { title, version, documentationLink, scopes } of GOOGLE_APIS) {
-	for (const { id, description } of scopes) {
+for (const { title, version, documentationLink, scopes } of GOOGLE_APIS || []) {
+	for (const { id, description } of scopes || []) {
 		console.log(
 			`Processing scope: ${id} - ${description} (${title} v${version})`,
 		);
