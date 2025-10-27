@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.5.3
+
+### Patch Changes
+
+- 4d7583e: Add all Google APIs and scopes to the diagnostics.
+
 ## 0.5.2
 
 ### Patch Changes
