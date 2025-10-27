@@ -40,7 +40,13 @@
   "type": "module",
   "main": "./out/extension.cjs",
   "contributes": {
-    "commands": []
+    "commands": [],
+    "mcpServerDefinitionProviders": [
+      {
+        "id": "google-workspace-developer",
+        "label": "Google Workspace Developer Tools"
+      }
+    ]
   },
   "activationEvents": [
     "onStartupFinished"
