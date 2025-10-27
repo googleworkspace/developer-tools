@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.5.4
+
+### Patch Changes
+
+- af40257: Fix contributes.mcpServerDefinitionProviders for MCP server.
+
 ## 0.5.3
 
 ### Patch Changes
