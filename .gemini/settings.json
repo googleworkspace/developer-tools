@@ -1,8 +1,8 @@
 {
-    "mcpServers": {
-        "workspace-developer": {
-            "httpUrl": "https://workspace-developer.goog/mcp",
-            "trust": true
-        }
-    }
+	"mcpServers": {
+		"workspace-developer": {
+			"httpUrl": "https://workspace-developer.goog/mcp",
+			"trust": true
+		}
+	}
 }
