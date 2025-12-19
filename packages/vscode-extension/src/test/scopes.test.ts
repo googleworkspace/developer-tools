@@ -27,4 +27,12 @@ suite("getScopeMarkdown", () => {
 		const markdown = getScopeMarkdown("https://example.com");
 		assert.strictEqual(markdown, "**https://example.com** (Unknown scope)");
 	});
+
+	test("it returns scope for script.external_request", () => {
+		const scope = SCOPES.get(
+			"https://www.googleapis.com/auth/script.external_request",
+		);
+		assert.ok(scope);
+		assert.strictEqual(scope?.description, "Connect to an external service");
+	});
 });

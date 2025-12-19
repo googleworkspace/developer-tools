@@ -64,6 +64,11 @@ for (const { title, version, documentationLink, scopes } of GOOGLE_APIS || []) {
 	}
 }
 
+SCOPES.set("https://www.googleapis.com/auth/script.external_request", {
+	description: "Connect to an external service",
+	apis: [],
+});
+
 const RESTRICTED_SCOPES = [
 	"https://www.googleapis.com/auth/chat.admin.delete",
 	"https://www.googleapis.com/auth/chat.app.delete",
