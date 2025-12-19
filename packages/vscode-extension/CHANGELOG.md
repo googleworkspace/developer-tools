@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.6.1
+
+### Patch Changes
+
+- c3d1446: Add Apps Script specific `https://www.googleapis.com/auth/script.external_request` which is not part of any API.
+
 ## 0.6.0
 
 ### Minor Changes
