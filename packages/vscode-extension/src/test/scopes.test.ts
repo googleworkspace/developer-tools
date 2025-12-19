@@ -15,7 +15,11 @@
  */
 
 import * as assert from "node:assert";
-import { SCOPES, getScopeMarkdown } from "../scopes.js";
+import {
+	SCOPES,
+	SCRIPT_EXTERNAL_REQUEST_SCOPE,
+	getScopeMarkdown,
+} from "../scopes.js";
 
 suite("getScopeMarkdown", () => {
 	test("it returns markdown for a known scope", () => {
@@ -29,9 +33,7 @@ suite("getScopeMarkdown", () => {
 	});
 
 	test("it returns scope for script.external_request", () => {
-		const scope = SCOPES.get(
-			"https://www.googleapis.com/auth/script.external_request",
-		);
+		const scope = SCOPES.get(SCRIPT_EXTERNAL_REQUEST_SCOPE);
 		assert.ok(scope);
 		assert.strictEqual(scope?.description, "Connect to an external service");
 	});

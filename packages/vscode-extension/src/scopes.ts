@@ -64,7 +64,10 @@ for (const { title, version, documentationLink, scopes } of GOOGLE_APIS || []) {
 	}
 }
 
-SCOPES.set("https://www.googleapis.com/auth/script.external_request", {
+export const SCRIPT_EXTERNAL_REQUEST_SCOPE =
+	"https://www.googleapis.com/auth/script.external_request";
+
+SCOPES.set(SCRIPT_EXTERNAL_REQUEST_SCOPE, {
 	description: "Connect to an external service",
 	apis: [],
 });
