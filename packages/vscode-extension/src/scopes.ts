@@ -71,6 +71,21 @@ SCOPES.set(SCRIPT_EXTERNAL_REQUEST_SCOPE, {
 	apis: [],
 });
 
+export const SCRIPT_CONTAINER_UI_SCOPE =
+	"https://www.googleapis.com/auth/script.container.ui";
+SCOPES.set(SCRIPT_CONTAINER_UI_SCOPE, {
+	description:
+		"Display and run third-party web content in prompts and sidebars inside Google applications.",
+	apis: [],
+});
+
+export const SCRIPT_SEND_MAIL_SCOPE =
+	"https://www.googleapis.com/auth/script.send_mail";
+SCOPES.set(SCRIPT_SEND_MAIL_SCOPE, {
+	description: "Send email on your behalf.",
+	apis: [],
+});
+
 /**
  * Scopes that are only available for the current document.
  *
