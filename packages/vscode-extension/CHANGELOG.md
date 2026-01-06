@@ -1,5 +1,11 @@
 # google-workspace-vscode-extension
 
+## 0.6.3
+
+### Patch Changes
+
+- 496529e: Add `https://www.googleapis.com/auth/script.container.ui` and `https://www.googleapis.com/auth/script.send_mail` to hardcoded scopes.
+
 ## 0.6.2
 
 ### Patch Changes
