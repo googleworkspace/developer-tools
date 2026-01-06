@@ -2,7 +2,7 @@
   "name": "google-workspace-developer-tools",
   "displayName": "Google Workspace Developer Tools",
   "description": "Lint Google Workspace OAuth2 scopes and more.",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "publisher": "google-workspace",
   "license": "Apache-2.0",
   "private": true,
