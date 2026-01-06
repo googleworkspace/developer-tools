@@ -66,11 +66,32 @@ for (const { title, version, documentationLink, scopes } of GOOGLE_APIS || []) {
 
 export const SCRIPT_EXTERNAL_REQUEST_SCOPE =
 	"https://www.googleapis.com/auth/script.external_request";
-
 SCOPES.set(SCRIPT_EXTERNAL_REQUEST_SCOPE, {
 	description: "Connect to an external service",
 	apis: [],
 });
+
+/**
+ * Scopes that are only available for the current document.
+ *
+ * @see https://developers.google.com/workspace/add-ons/concepts/workspace-scopes#editor-scopes
+ * @see https://justin.poehnelt.com/posts/apps-script-currentonly-scopes/
+ */
+export const CURRENT_ONLY_SCOPES = [
+	"https://www.googleapis.com/auth/documents.currentonly",
+	"https://www.googleapis.com/auth/forms.currentonly",
+	"https://www.googleapis.com/auth/presentations.currentonly",
+	"https://www.googleapis.com/auth/spreadsheets.currentonly",
+];
+
+for (const scope of CURRENT_ONLY_SCOPES) {
+	SCOPES.set(scope, {
+		description:
+			"Access the current document, sheet, presentation, or form. The `currentonly` scope is only available within Apps Script Services. This does not include Apps Script Advanced Services or direct calls to Google Workspace APIs.",
+		classification: ScopeClassification.NON_SENSITIVE,
+		apis: [],
+	});
+}
 
 const RESTRICTED_SCOPES = [
 	"https://www.googleapis.com/auth/chat.admin.delete",
