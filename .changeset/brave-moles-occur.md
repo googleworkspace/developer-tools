@@ -2,4 +2,4 @@
 "google-workspace-developer-tools": patch
 ---
 
-chore: release
+[Please add a user-facing description of the changes here]
