@@ -17,7 +17,9 @@ Automatically validate and document Google Workspace OAuth2 scopes in your code:
 - **Hover Documentation**: See scope descriptions, associated APIs, and documentation links on hover
 - **Multi-API Support**: Coverage for all Google Workspace APIs (Gmail, Drive, Calendar, Chat, Admin, and more)
 
-![OAuth2 Scope Linting](https://raw.githubusercontent.com/googleworkspace/vscode-extension/main/packages/vscode-extension/assets/scope-diagnostics.png)
+Get code completions for all Google OAuth2 scopes:
+
+![OAuth2 Scope Linting & Completions](https://raw.githubusercontent.com/googleworkspace/vscode-extension/main/packages/vscode-extension/assets/scope-completion.gif)
 
 **Scope Classifications:**
 

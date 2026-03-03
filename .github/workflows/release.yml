@@ -37,6 +37,7 @@ jobs:
       - run: pnpm build
       - run: pnpm lint
       - run: pnpm check
+      - uses: ./.github/actions/setup-xvfb
       - run: pnpm test
       - run: pnpm ci:package
       - run: |

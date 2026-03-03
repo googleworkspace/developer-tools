@@ -1,5 +1,37 @@
 # google-workspace-vscode-extension
 
+## 0.6.2
+
+### Patch Changes
+
+- 77be986: Added missing currentonly scopes for Apps Script (Docs, Sheets, Slides, Forms). The currentonly scope is only available within Apps Script Services. This does not include Apps Script Advanced Services or direct calls to Google Workspace APIs.
+
+  For more information, see [Editor scopes](https://developers.google.com/workspace/add-ons/concepts/workspace-scopes#editor-scopes) and [Apps Script currentonly scopes](https://justin.poehnelt.com/posts/apps-script-currentonly-scopes/).
+
+## 0.6.1
+
+### Patch Changes
+
+- c3d1446: Add Apps Script specific `https://www.googleapis.com/auth/script.external_request` which is not part of any API.
+
+## 0.6.0
+
+### Minor Changes
+
+- 3892fcf: Implement code completion for OAuth2 scopes.
+
+## 0.5.4
+
+### Patch Changes
+
+- af40257: Fix contributes.mcpServerDefinitionProviders for MCP server.
+
+## 0.5.3
+
+### Patch Changes
+
+- 4d7583e: Add all Google APIs and scopes to the diagnostics.
+
 ## 0.5.2
 
 ### Patch Changes

@@ -8,14 +8,9 @@ const { data: apis } = await discovery.apis.list({
 	fields: "items(title,description,discoveryRestUrl,documentationLink,version)",
 });
 
-const allApis = (apis.items || [])
-	.filter(
-		(x) =>
-			x.documentationLink?.includes("hangouts") ||
-			x.documentationLink?.includes("workspace") ||
-			x.documentationLink?.includes("apps-script"),
-	)
-	.sort((a, b) => a.id?.localeCompare(b.id ?? "") || 0);
+const allApis = (apis.items || []).sort(
+	(a, b) => a.id?.localeCompare(b.id ?? "") || 0,
+);
 const chunkSize = 10;
 const apisWithScopes: Array<
 	typeof apis & {
@@ -80,3 +75,13 @@ await fs.writeFile(
 export const GOOGLE_APIS = ${JSON.stringify(apisWithScopes, null, 2)};
 `,
 );
+
+function _isWorkspaceAPI(api: {
+	documentationLink?: string;
+}): boolean {
+	return Boolean(
+		api.documentationLink?.includes("hangouts") ||
+			api.documentationLink?.includes("workspace") ||
+			api.documentationLink?.includes("apps-script"),
+	);
+}
