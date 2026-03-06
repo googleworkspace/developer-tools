@@ -1,5 +1,5 @@
 ---
-
+"google-workspace-developer-tools": patch
 ---
 
-Changeset main
+[Please add a user-facing description of the changes here]
