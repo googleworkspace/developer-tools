@@ -20,7 +20,7 @@
     "husky": "catalog:",
     "lint-staged": "catalog:",
     "prettier": "catalog:",
-    "turbo": "catalog:",
+    "turbo": "^2.8.14",
     "typescript": "catalog:"
   },
   "husky": {
@@ -40,6 +40,12 @@
   "pnpm": {
     "overrides": {
       "@types/vscode": "^1.82.0"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "@vscode/vsce-sign",
+      "esbuild",
+      "keytar"
+    ]
   }
 }
