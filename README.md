@@ -1,5 +1,5 @@
 # Google Workspace Developer Tools
-<Creator> (ฤทธิไกร ก็ริกัน)
+<Creator> (ฤทธิไกร กิริกัน)
 [![Build Status](https://github.com/googleworkspace/developer-tools/actions/workflows/test.yml/badge.svg)](https://github.com/googleworkspace/developer-tools/actions/workflows/test.yml)
 [![Release Status](https://github.com/googleworkspace/developer-tools/actions/workflows/release.yml/badge.svg)](https://github.com/googleworkspace/developer-tools/actions/workflows/release.yml)
 [![Apache 2.0 License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
