@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b4b4e3e5-0825-4d21-a5e0-007758b2ed51" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.changeset/fresh-frogs-enjoy.md" beforeDir="false" afterPath="$PROJECT_DIR$/.changeset/fresh-frogs-enjoy.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.changeset/green-paws-worry.md" beforeDir="false" afterPath="$PROJECT_DIR$/.changeset/green-paws-worry.md" afterDir="false" />
@@ -13,6 +14,12 @@
       <change beforePath="$PROJECT_DIR$/packages/vscode-extension/src/apis.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/vscode-extension/src/apis.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turbo.json" beforeDir="false" afterPath="$PROJECT_DIR$/turbo.json" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +47,11 @@
         "id": "PR_kwDORcUmZ87HSJ9f",
         "number": 11
       },
+<<<<<<< Updated upstream
       "lastSeen": 1772875234602
+=======
+      "lastSeen": 1772865610191
+>>>>>>> Stashed changes
     }
   ]
 }]]></component>
