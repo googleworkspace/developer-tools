@@ -1,6 +1,14 @@
-# Report a security issue
+# Install dependencies
+pnpm install
 
-To report a security issue, please use [https://g.co/vulnz](https://g.co/vulnz). We use
-[https://g.co/vulnz](https://g.co/vulnz) for our intake, and do coordination and disclosure here on
-GitHub (including using GitHub Security Advisory). The Google Security Team will
-respond within 5 working days of your report on [https://g.co/vulnz](https://g.co/vulnz).
+# Build all packages
+pnpm build
+
+# Run tests
+pnpm test
+
+# Lint and format code
+pnpm lint
+
+# Watch mode for development
+pnpm --filter google-workspace-developer-tools dev
